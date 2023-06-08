@@ -13,12 +13,12 @@ const images = [
   },
 ];
 
-const createGalleryItem = ({ url, alt }) =>
+const createImages = ({ url, alt }) =>
   `<li><img src="${url}" alt="${alt}" width = 300></li>`;
-const galleryMarkup = images.reduce(
-  (acc, item) => acc + createGalleryItem(item),
+const gallery = images.reduce(
+  (acc, item) => acc + createImages(item),
   ""
 );
-const galleryList = document.querySelector(".gallery");
-galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
-galleryList.setAttribute("style", "list-style-type: none; display: flex; gap: 30px");
+const list = document.querySelector(".gallery");
+list.insertAdjacentHTML("afterbegin", gallery);
+list.setAttribute("style", "list-style-type: none; display: flex; gap: 30px");
