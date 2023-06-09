@@ -1,7 +1,7 @@
-let controlFont = document.getElementById("font-size-control");
+let changeFontSize = document.getElementById("font-size-control");
 
-let text = document.getElementById("text");
+let inscription = document.getElementById("text");
 
-controlFont.oninput = function() {
-  text.style.fontSize = controlFont.value + "px";
+changeFontSize.oninput = function() {
+  inscription.style.fontSize = changeFontSize.value + "px";
 };
