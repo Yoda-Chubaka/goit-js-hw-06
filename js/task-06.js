@@ -8,12 +8,8 @@ function onBlurBorderColor(event) {
   if (inputValueLength === inputDataLength) {
     inputRef.classList.add('valid');
     inputRef.classList.remove('invalid');
-  }
-  if (inputValueLength === 0) {
+  } else {
     inputRef.classList.remove('valid');
-    inputRef.classList.remove('invalid');
-  }
-  if (inputValueLength !== inputDataLength && inputValueLength !== 0) {
     inputRef.classList.add('invalid');
   }
 }
